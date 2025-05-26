@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
-/*
+
 //EJERCICIO 1:
 Console.WriteLine("Ingrese una palabra:");
 string palabra1 = Console.ReadLine();
@@ -32,7 +32,7 @@ int opcion;
         Console.WriteLine("4. Dividir");
         Console.WriteLine("5. Salir");
 
-        opcion = int.Parse(Console.ReadLine());
+        opcion = int.TryParse(Console.ReadLine());
 
         if (opcion >= 1 && opcion < 5)
         {
@@ -120,7 +120,7 @@ foreach (string elemento in partes)
 {
     Console.WriteLine(elemento);
 }
-*/
+
 //EJERCICIO 9:
 Console.WriteLine("Ingrese una ecuación simple:");
 string ecuacion = Console.ReadLine();
@@ -151,8 +151,8 @@ else
 }
 
 
-double parte1 = double.Parse(ecuacion.Substring(0, posicion));
-double parte2 = double.Parse(ecuacion.Substring(posicion + 1));
+double parte1 = double.TryParse(ecuacion.Substring(0, posicion));
+double parte2 = double.TryParse(ecuacion.Substring(posicion + 1));
 
 char signo = ecuacion[posicion];
 
